@@ -5,7 +5,29 @@
 let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 16, 19, 24, 29, 27, 26]
 
 const binarySearch = function(arr, target) {
+ 
+    // Sort value.
+    arr.sort((a, b) => a - b);
 
+    let left = 0; // first index of array
+    let right = arr.length - 1; // last index of array
+
+    while(left <= right) {
+        // Calculate middle value of sorted array.
+        middle = Math.floor((left + right) / 2);
+    
+        if(arr[middle] === target) {
+            index = middle;
+            console.log('track number ' + arr[middle])
+            return index;
+        } else if (arr[middle] < target) {
+            console.log('track number ' + arr[middle])
+            left = middle + 1;
+        } else {
+            console.log('track number ' + arr[middle])
+            right = middle - 1;
+        }
+    }
 };
 
 
