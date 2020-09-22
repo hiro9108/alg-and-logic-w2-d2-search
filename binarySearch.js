@@ -1,3 +1,5 @@
+// Group member name: Hiro, INAE, Michaela
+
 // Write an algorithm that performs binary search on a given array.
 // the function will also track, and print out the number of steps required to reach the target
 // the index of the item 
