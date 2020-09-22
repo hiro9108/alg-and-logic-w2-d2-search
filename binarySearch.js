@@ -12,20 +12,22 @@ const binarySearch = function(arr, target) {
     let left = 0; // first index of array
     let right = arr.length - 1; // last index of array
 
+    let count = 0;
+
     while(left <= right) {
         // Calculate middle value of sorted array.
         middle = Math.floor((left + right) / 2);
     
         if(arr[middle] === target) {
             index = middle;
-            console.log('track number ' + arr[middle])
-            return index;
+            count++
+            return `target=${target} index=${index} count=${count}` ;
         } else if (arr[middle] < target) {
-            console.log('track number ' + arr[middle])
             left = middle + 1;
+            count++
         } else {
-            console.log('track number ' + arr[middle])
             right = middle - 1;
+            count++
         }
     }
 };
